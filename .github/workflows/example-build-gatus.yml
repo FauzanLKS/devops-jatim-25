@@ -6,12 +6,12 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: lks-gatus
-  ECS_CLUSTER: lks-oss-cluster
+  ECR_REPOSITORY: 637423510273.dkr.ecr.us-east-1.amazonaws.com/lks-gatus
+  ECS_CLUSTER: arn:aws:ecs:us-east-1:637423510273:cluster/lks-oss-cluster
   TOKEN: ${{ secrets.TOKEN }}
 
-  ECS_GATUS_SERVICE: gatus-service
-  GATUS_TASK_DEFINITION: lks-gatus-app
+  ECS_GATUS_SERVICE: arn:aws:ecs:us-east-1:637423510273:service/lks-oss-cluster/gatus-service
+  GATUS_TASK_DEFINITION: larn:aws:ecs:us-east-1:637423510273:task-definition/lks-gatus-app:2
   GATUS_URL: "??? ${{ secrets.ALB_ENDPOINT }} ???"
 # FILL THE MISSING VALUES ABOVE
 
