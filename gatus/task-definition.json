@@ -1,14 +1,14 @@
 {
   // FILL IN THE MISSING VALUES BELOW
-  "family": "",
-  "taskRoleArn": "",
-  "executionRoleArn": "",
-  "networkMode": "",
+  "family": "lks-gatus-app",
+  "taskRoleArn": "arn:aws:iam::637423510273:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::637423510273:role/LabRole",
+  "networkMode": "awsvpc",
   "volumes": [],
   "placementConstraints": [],
-  "requiresCompatibilities": ???,
-  "cpu": "",
-  "memory": "",
+  "requiresCompatibilities": FARGATE,
+  "cpu": "512",
+  "memory": "1024",
   // FILL IN THE MISSING VALUES ABOVE
 
   "runtimePlatform": {
@@ -19,7 +19,7 @@
   "containerDefinitions": [
     {
       "name": "gatus",
-      "image": "<task-def-image>", // WARN: REMOVE THIS COMMENT AND DO NOT CHANGE THIS LINE
+      "image": "<task-def-image>",
       "cpu": 0,
       "essential": true,
       "volumesFrom": [],
@@ -28,10 +28,10 @@
       // FILL IN THE MISSING VALUES BELOW
       "portMappings": [],
       "logConfiguration": {
-        "logDriver": "???",
+        "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "???",
-          "awslogs-region": "???",
+          "awslogs-group": "/ecs/lks-gatus-app",
+          "awslogs-region": "us-east-1",
           "mode": "non-blocking",
           "awslogs-create-group": "true",
           "max-buffer-size": "25m",
