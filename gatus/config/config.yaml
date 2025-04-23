@@ -1,7 +1,7 @@
 # FILL IN THE MISSING VALUES BELOW
 alerting: 
   slack:
-    enabled: true # WARN: DO NOT CHANGE THIS LINE     
+    enabled: true #  
     token: "<github-token>" # WARN: DO NOT CHANGE THIS LINE
 # FILL IN THE MISSING VALUES ABOVE
 
@@ -9,31 +9,31 @@ alerting:
 endpoints:
   - name: Leantime
     url: <leantime-url> # WARN: DO NOT CHANGE THIS LINE
-    interval: 30s # WARN: DO NOT CHANGE THIS LINE
+    interval: 30s 
     conditions:
       - type: "status_code"
         expected: 200
         message: "Leantime is down! Please check and fix it."
       - type: "response_time"
-        threshold: 1000 # milliseconds
+        threshold: 1000 
         message: "Leantime is slow! Please check and fix it."
       - type: "keyword"
         keyword: "Leantime"
         message: "Leantime is not responding as expected! Please check and fix it."
     conditions:
     alerts:
-      - type: slack # WARN: DO NOT CHANGE THIS LINE 
+      - type: slack 
         description: "Sensei, Leantime is down! Please check and fix it."
 
   - name: Gatus
     url: <gatus-url> # WARN: DO NOT CHANGE THIS LINE
-    interval: 60s # seconds
+    interval: 60s 
     conditions:
       - type: "status_code"
         expected: 200
         message: "Gatus is down! Please check and fix it."
       - type: "response_time"
-        threshold: 1000 # milliseconds
+        threshold: 1000 
         message: "Gatus is slow! Please check and fix it."
       - type: "keyword"
         keyword: "Gatus"
