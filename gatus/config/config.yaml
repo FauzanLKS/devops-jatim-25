@@ -1,6 +1,7 @@
 # FILL IN THE MISSING VALUES BELOW
-alerting:
-  ???:
+alerting: 
+  slack:
+    enabled: true # WARN: DO NOT CHANGE THIS LINE     
     token: "<github-token>" # WARN: DO NOT CHANGE THIS LINE
 # FILL IN THE MISSING VALUES ABOVE
 
@@ -21,7 +22,7 @@ endpoints:
         message: "Leantime is not responding as expected! Please check and fix it."
     conditions:
     alerts:
-      - type: ???
+      - type: slack # WARN: DO NOT CHANGE THIS LINE 
         description: "Sensei, Leantime is down! Please check and fix it."
 
   - name: Gatus
@@ -39,6 +40,6 @@ endpoints:
         message: "Gatus is not responding as expected! Please check and fix it."
     conditions:
     alerts:
-      - type: ???
+      - type: slack # WARN: DO NOT CHANGE THIS LINE
         description: "Sensei, Gatus is down! Please check and fix it."
 # FILL IN THE MISSING VALUES BELOW
